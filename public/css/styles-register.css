@@ -1,0 +1,281 @@
+* {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+[un-cloak] {
+    display: none;
+}
+
+.sb-img {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("images/bg.png") center fixed;
+
+    background-size: cover;
+}
+
+#clients-list > div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#clients-list > div:nth-child(1) {
+    background-image: url("images/pr1.png");
+}
+
+#clients-list > div:nth-child(2) {
+    background-image: url("images/pr2.png");
+}
+
+#clients-list > div:nth-child(3) {
+    background-image: url("images/pr3.png");
+}
+
+#clients-list > div:nth-child(4) {
+    background-image: url("images/pr4.png");
+}
+
+#navmenu li:hover {
+    transform: scale(1.05);
+}
+
+#navmenu li:active {
+    transform: scale(0.95);
+}
+
+#register-login li:hover {
+    transform: scale(1.05);
+}
+
+#register-login li:active {
+    transform: scale(0.95);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ececec;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h2 {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+}
+
+.wrapper h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #4070f4;
+}
+
+.wrapper form {
+    margin-top: 30px;
+}
+
+.wrapper form .input-box {
+    height: 52px;
+    margin: 18px 0;
+}
+
+form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #4070f4;
+}
+
+form .policy {
+    display: flex;
+    align-items: center;
+}
+
+form h3 {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.input-box.button input {
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: #4070f4;
+    cursor: pointer;
+}
+
+.input-box.button input:hover {
+    background: #0e4bf1;
+}
+
+form .text h3 {
+    color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+form .text h3 a {
+    color: #4070f4;
+    text-decoration: none;
+}
+
+form .text h3 a:hover {
+    text-decoration: underline;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+
+.left-side {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side::before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background: #afafb6;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-side {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.details {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.details i {
+    font-size: 25px;
+    color: #4070f4;
+    margin-bottom: 10px;
+}
+
+.topic {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.text-one,
+.text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #4070f4;
+    margin-bottom: 10px;
+}
+
+.right-side p {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background: #f0f1f8;
+    padding: 0 20px;
+}
+
+.input-box textarea {
+    resize: none;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.message-box {
+    min-height: 110px;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button input[type="button"] {
+    color: #fff;
+    font-size: 18px;
+    background: #4070f4;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.button input[type="button"]:hover {
+    background: rgb(0, 0, 207);
+}
