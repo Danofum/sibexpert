@@ -4,11 +4,13 @@
     <nav>
         <ul id="navmenu" class="flex flex-row list-none gap-8 [&>*]:transition-all [&>*>*]:no-underline [&>*>*]:color-brand-text [&>*]:min-w-fit [&>*]:lt-sm:w-fit
 				lt-lg:flex-col lt-lg:absolute lt-lg:bg-brand-bg lt-lg:gap-4 lt-lg:p-8 lt-lg:p-t-4 lt-lg:p-b-10 lt-lg:w-full lt-lg:top-0 lt-lg:left-0 lt-lg:important:top-[-500px] transition-all box-border">
-            <li><a href="#about">О компании</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#projects">Проекты</a></li>
-            <li><a href="#clients">Клиенты</a></li>
-            <li><a href="#footer">Контакты</a></li>
+            @if(request()->routeIs('main') === false)
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#clients">Клиенты</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            @endif
             <hr class="sm:hidden important:w-full text-gray-200">
         </ul>
     </nav>
