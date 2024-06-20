@@ -72,3 +72,5 @@ networks:
   sibexpert_network:
     name: sibexpert_network
     driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
