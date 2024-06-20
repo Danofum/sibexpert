@@ -53,3 +53,32 @@
 #register-login li:active {
     transform: scale(0.95);
 }
+
+.bg-img-1 {
+    background:	linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("/css/images/bg/1.png") center;
+
+    background-size: cover;
+}
+.bg-img-2 {
+    background:	linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("/css/images/bg/2.png") center;
+
+    background-size: cover;
+}
+.bg-img-3 {
+    background:	linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("/css/images/bg/3.png") center;
+
+    background-size: cover;
+}
+.bg-img-4 {
+    background:	linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("/css/images/bg/4.png") center;
+
+    background-size: cover;
+}

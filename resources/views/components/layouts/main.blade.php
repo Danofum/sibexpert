@@ -22,8 +22,8 @@
 {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>--}}
 {{--    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>--}}
 
-    <script src="{{ asset('/js/script.js') }}"></script>
-    <script src="{{ asset('/js/unocss.min.js') }}"></script>
+    <script src="{{ url('/js/script.js') }}"></script>
+    <script src="{{ url('/js/unocss.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/styles-register.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/tabler-icons.min.css') }}">
