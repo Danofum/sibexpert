@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: ./docker/dockerfiles
+      dockerfile: nginx.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: ${APP_NAME}_nginx
+    restart: always
+    expose:
+      - 80/tcp
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html:ro
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - sibexpert_network
+
+  php:
+    build:
+      context: ./docker/dockerfiles
+      dockerfile: php.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: ${APP_NAME}_php
+    restart: always
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - mysql
+    networks:
+      - sibexpert_network
+
+  mysql:
+    image: mysql
+    container_name: ${APP_NAME}_mysql
+    restart: always
+    depends_on:
+      - phpmyadmin
+    volumes:
+      - ./docker/database:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+    networks:
+      - sibexpert_network
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: ${APP_NAME}_phpmyadmin
+    restart: always
+    expose:
+      - 80/tcp
+    ports:
+      - 8000:80
+    environment:
+      - PMA_HOST=${DB_HOST}
+      - PMA_PORT=${DB_PORT}
+    networks:
+      - sibexpert_network
+
+networks:
+  sibexpert_network:
+    name: sibexpert_network
+    driver: bridge
