@@ -9,14 +9,22 @@
             <li><a href="#clients">Клиенты</a></li>
             <li><a href="#footer">Контакты</a></li>
             <hr class="sm:hidden important:w-full text-gray-200">
-            <li class="sm:hidden"><a href="#">Регистрация</a></li>
-            <li class="sm:hidden"><a href="#">Вход</a></li>
+            @auth
+                <li class="sm:hidden"><a href="{{ route('user.log-out') }}">Выйти</a></li>
+            @else
+                <li class="sm:hidden"><a href="{{ route('user.register') }}">Регистрация</a></li>
+                <li class="sm:hidden"><a href="{{ route('user.login') }}">Вход</a></li>
+            @endauth
         </ul>
     </nav>
     <di class="flex gap-[24px] items-center" id="register-login">
         <ul class="flex list-none gap-8 [&>*>*]:no-underline [&>*>*]:color-brand-text lt-sm:hidden">
-            <li><a href="{{ route('user.register') }}">Регистрация</a></li>
-            <li><a href="{{ route('user.login') }}">Вход</a></li>
+            @auth
+                <li class="sm:hidden"><a href="{{ route('user.log-out') }}">Выйти</a></li>
+            @else
+                <li class="sm:hidden"><a href="{{ route('user.register') }}">Регистрация</a></li>
+                <li class="sm:hidden"><a href="{{ route('user.login') }}">Вход</a></li>
+            @endauth
         </ul>
         <button class="w-8 h-8 lg:hidden text-8 z-10 flex items-center justify-center bg-transparent border-none text-brand-text cursor-pointer" onclick="menuToggle()">
             <i class="ti ti-menu-2 active:scale-80 transform transition-all" id="burger-menu-button-open"></i>
