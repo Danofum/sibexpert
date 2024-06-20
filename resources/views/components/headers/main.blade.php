@@ -11,16 +11,18 @@
             <li><a href="#footer">Контакты</a></li>
             <hr class="sm:hidden important:w-full text-gray-200">
             @auth
-                <li class="sm:hidden"><a href="{{ route('user.log-out') }}">Выйти</a></li>
+                <li><a href="{{ route('user.profile') }}">Личный кабинет</a></li>
+                <li><a href="{{ route('user.log-out') }}">Выйти</a></li>
             @else
-                <li class="sm:hidden"><a href="{{ route('user.register') }}">Регистрация</a></li>
-                <li class="sm:hidden"><a href="{{ route('user.login') }}">Вход</a></li>
+                <li><a href="{{ route('user.register') }}">Регистрация</a></li>
+                <li><a href="{{ route('user.login') }}">Вход</a></li>
             @endauth
         </ul>
     </nav>
     <div class="flex gap-[24px] items-center" id="register-login">
         <ul class="flex list-none gap-8 [&>*>*]:no-underline [&>*>*]:color-brand-text lt-sm:hidden">
             @auth
+                <li><a href="{{ route('user.profile') }}">Личный кабинет</a></li>
                 <li><a href="{{ route('user.log-out') }}">Выйти</a></li>
             @else
                 <li><a href="{{ route('user.register') }}">Регистрация</a></li>
