@@ -1,6 +1,6 @@
 <header
     class="flex justify-between p-l-30 p-r-30 lt-lg:p-l-8 lt-lg:p-r-8 lt-sm:p-l-3 lt-sm:p-r-3 box-border items-center w-full h-[90px] bg-brand-bg color-brand-text">
-    <span class="font-bold text-[28px]" onclick="window.location.href = '/';">SibExpert</span>
+    <span class="font-bold text-[28px]" onclick="window.location.href = '/';" style="cursor: pointer">SibExpert</span>
     <nav>
         <ul id="navmenu" class="flex flex-row list-none gap-8 [&>*]:transition-all [&>*>*]:no-underline [&>*>*]:color-brand-text [&>*]:min-w-fit [&>*]:lt-sm:w-fit
 				lt-lg:flex-col lt-lg:absolute lt-lg:bg-brand-bg lt-lg:gap-4 lt-lg:p-8 lt-lg:p-t-4 lt-lg:p-b-10 lt-lg:w-full lt-lg:top-0 lt-lg:left-0 lt-lg:important:top-[-500px] transition-all box-border">
